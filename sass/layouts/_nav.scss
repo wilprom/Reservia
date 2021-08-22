@@ -1,0 +1,14 @@
+.nav{
+    height: 80px;
+    justify-content: initial;
+    a{
+        padding: 35px 40px 5px 40px;
+        &:hover{
+            color: $colorPrimary;
+            border-top: 3px solid $colorPrimary;
+        }
+        &:nth-last-child(1){
+            color: $colorPrimary;
+        }
+    }
+}

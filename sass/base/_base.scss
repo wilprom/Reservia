@@ -1,0 +1,13 @@
+body{
+    margin-top: 0px;
+    header{
+        @include mainBlockPosition;
+    }
+    main{
+        @include mainBlockPosition;
+    }
+    a{
+        text-decoration: none;
+        color: $colorLink;
+    }
+}

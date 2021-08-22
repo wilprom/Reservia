@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    &--horizontalsItems{
+        flex-direction: row;
+    }
+    &--verticalsItems{
+        flex-direction: column;
+    }
+}
