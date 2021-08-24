@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 body{
     font-family: 'Raleway', sans-serif;
 }
-.nav{
+nav{
     a{
         &:nth-last-child(1){
             font-weight: bold;
         }
     }
 }
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.1rem;
+}
+input, button{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+

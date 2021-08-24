@@ -1,0 +1,96 @@
+main{
+    i{
+        color: $colorPrimary;
+    }
+}
+.section_one{
+    div.filtres, div.info{
+        margin-left: 10px;
+    }
+}
+.heading{
+    h3{
+        margin-bottom: 8px;
+    }
+    p{
+        margin-top: 0px;
+    }
+}
+.research{
+    width: 32%;
+    height: 50px;
+    justify-content: initial;
+    background-color: $colorSecondary;
+    @include bdRadiusleft;
+    input{
+        width: 54%;
+        padding-left: 10px;
+        border: 1px solid $colorSecondary;
+    }
+    button{
+        flex: 1;
+        color: $colorWhite;
+        border: 1px solid $colorPrimary;
+    }
+    i{
+        flex: 0;
+        margin: auto;
+        margin-left: 18px;
+        margin-right: 18px;
+        color: initial;        
+    }
+}
+.research, .research button{
+    @include bdRadiusRight;
+}
+.filtres{
+    margin-top: 30px;
+    height: 48px;
+    width: 72%;
+    h4{
+        margin: auto;
+    }
+    button{
+        border: 2px solid $colorSecondary;
+        i{
+            width: 48px;
+            height: 34px;
+            margin-top: -3px;
+            margin-left: -8px;
+            padding-top: 14px;
+            background-color: $colorTertiary;
+        }
+        &:hover{
+            i{
+                background-color: $colorWhite;
+                border: 1px solid $colorPrimary;
+                height: 32px;
+                margin-top: -3px;
+            }
+        }
+        span{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    button, i{
+        @include bdRadiusleft($radiusFiltres);
+        @include bdRadiusRight($radiusFiltres);
+    }
+
+}
+.info{
+    margin-top: 30px;
+    i{
+        width: 16px;
+        height: 21px;
+        padding-top: 5px;
+        padding-left: 10px;
+        @include bdRadiusleft;
+        @include bdRadiusRight;
+        border: 1px solid $colorSecondary;
+    }
+    span{
+        margin-left: 10px;
+    }
+}

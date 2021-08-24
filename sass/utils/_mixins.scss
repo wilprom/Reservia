@@ -2,3 +2,12 @@
     width: $mainWidth;
     margin: auto;
 }
+
+@mixin bdRadiusleft($radiusItems: $radius) {
+    border-top-left-radius: $radiusItems;
+    border-bottom-left-radius: $radiusItems;
+}
+@mixin bdRadiusRight($radiusItems: $radius) {
+    border-top-right-radius: $radiusItems;
+    border-bottom-right-radius: $radiusItems;
+}

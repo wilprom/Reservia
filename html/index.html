@@ -29,22 +29,39 @@
     </header>
     <main>
         <!--SECTION 1-->
-        <section id="section_one">
-            <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
-            <p>En plein centre ville ou en pleine nature</p>
-            <div>
+        <section id="section_one" class="section_one">
+            <div class="heading container container--verticalsItems">
+                <span><h3>Trouvez votre hébergement pour des vacances de rêve</h3></span>
+                <span><p>En plein centre ville ou en pleine nature</p></span>
+            </div>
+            <div class="research container container--horizontalsItems">
                 <i class="fas fa-map-marker-alt"></i>
-                <input type="search" name="Research" id="Research" placeholder="Marseille, France">
-                <button type="submit">Rechercher</button>
+                <input type="search" name="Research" id="Research" placeholder="Marseille, France" maxlength="25">
+                <button type="submit" class="btn btn--colored">Rechercher</button>
             </div>
-            <div>
-                <h4>Filtres</h4>
-                <button type="submit"><i class="fas fa-money-bill-wave"></i>Économique</button>
-                <button type="submit"><i class="fas fa-child"></i>Familial</button>
-                <button type="submit"><i class="fas fa-heart"></i>Romantique</button>
-                <button type="submit"><i class="fas fa-dog"></i>Animaux autorisés</button>
+            <div class="filtres container container--horizontalsItems">
+                <div class="container"><h4>Filtres</h4></div>
+                <button type="submit" class="btn">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Économique</span> 
+                </button>
+                <button type="submit" class="btn">
+                    <i class="fas fa-child"></i>
+                    <span>Familial</span> 
+                </button>
+                <button type="submit" class="btn">
+                    <i class="fas fa-heart"></i>
+                    <span>Romantique</span> 
+                </button>
+                <button type="submit" class="btn">
+                    <i class="fas fa-dog"></i>
+                    <span>Animaux autorisés</span> 
+                </button>
             </div>
-            <p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <span>Plus de 500 logements sont disponibles dans cette ville</span>
+            </div>    
         </section>
         <!--SECTION 1-->
         <!--SECTION 2-->

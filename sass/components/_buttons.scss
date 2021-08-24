@@ -1,0 +1,12 @@
+.btn{
+    background-color: $colorWhite;
+    &--colored{
+        background-color: $colorPrimary;
+    }
+    &:hover{
+        background-color: $colorTertiary;
+        color: $colorPrimary;
+        border: 2px solid $colorPrimary;
+        cursor: pointer;
+    }
+}

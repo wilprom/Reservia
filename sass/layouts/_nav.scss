@@ -3,11 +3,18 @@
     justify-content: initial;
     a{
         padding: 35px 40px 5px 40px;
+        &:nth-child(2), &:nth-last-child(1){
+            padding-top: 40px;
+        }
         &:hover{
             color: $colorPrimary;
             border-top: 3px solid $colorPrimary;
+            background-color: $colorTertiary;
         }
-        &:nth-last-child(1){
+        &:nth-child(1){
+            border-top: 3px solid $colorPrimary;
+        }
+        &:nth-child(1), &:nth-last-child(1){
             color: $colorPrimary;
         }
     }

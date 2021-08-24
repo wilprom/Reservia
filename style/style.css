@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
 body {
   margin-top: 0px;
 }
@@ -19,8 +19,34 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.nav a:nth-last-child(1) {
+nav a:nth-last-child(1) {
   font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+input, button {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #FFFFFF;
+}
+.btn--colored {
+  background-color: #0065FC;
+}
+.btn:hover {
+  background-color: #DEEBFF;
+  color: #0065FC;
+  border: 2px solid #0065FC;
+  cursor: pointer;
 }
 
 .container {
@@ -35,7 +61,7 @@ body {
 }
 
 .header__logo {
-  margin: auto;
+  margin-top: 9px;
 }
 
 .nav {
@@ -45,12 +71,119 @@ body {
 .nav a {
   padding: 35px 40px 5px 40px;
 }
+.nav a:nth-child(2), .nav a:nth-last-child(1) {
+  padding-top: 40px;
+}
 .nav a:hover {
   color: #0065FC;
   border-top: 3px solid #0065FC;
+  background-color: #DEEBFF;
 }
-.nav a:nth-last-child(1) {
+.nav a:nth-child(1) {
+  border-top: 3px solid #0065FC;
+}
+.nav a:nth-child(1), .nav a:nth-last-child(1) {
   color: #0065FC;
+}
+
+main i {
+  color: #0065FC;
+}
+
+.section_one div.filtres, .section_one div.info {
+  margin-left: 10px;
+}
+
+.heading h3 {
+  margin-bottom: 8px;
+}
+.heading p {
+  margin-top: 0px;
+}
+
+.research {
+  width: 32%;
+  height: 50px;
+  justify-content: initial;
+  background-color: #F2F2F2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.research input {
+  width: 54%;
+  padding-left: 10px;
+  border: 1px solid #F2F2F2;
+}
+.research button {
+  flex: 1;
+  color: #FFFFFF;
+  border: 1px solid #0065FC;
+}
+.research i {
+  flex: 0;
+  margin: auto;
+  margin-left: 18px;
+  margin-right: 18px;
+  color: initial;
+}
+
+.research, .research button {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.filtres {
+  margin-top: 30px;
+  height: 48px;
+  width: 72%;
+}
+.filtres h4 {
+  margin: auto;
+}
+.filtres button {
+  border: 2px solid #F2F2F2;
+}
+.filtres button i {
+  width: 48px;
+  height: 34px;
+  margin-top: -3px;
+  margin-left: -8px;
+  padding-top: 14px;
+  background-color: #DEEBFF;
+}
+.filtres button:hover i {
+  background-color: #FFFFFF;
+  border: 1px solid #0065FC;
+  height: 32px;
+  margin-top: -3px;
+}
+.filtres button span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.filtres button, .filtres i {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.info {
+  margin-top: 30px;
+}
+.info i {
+  width: 16px;
+  height: 21px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #F2F2F2;
+}
+.info span {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
