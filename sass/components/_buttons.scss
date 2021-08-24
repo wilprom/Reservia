@@ -1,5 +1,6 @@
 .btn{
     background-color: $colorWhite;
+    border: 2px solid $colorQuaternary;
     &--colored{
         background-color: $colorPrimary;
     }

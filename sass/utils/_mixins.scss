@@ -3,11 +3,15 @@
     margin: auto;
 }
 
-@mixin bdRadiusleft($radiusItems: $radius) {
+@mixin bdRadiusLeft($radiusItems: $radius) {
     border-top-left-radius: $radiusItems;
     border-bottom-left-radius: $radiusItems;
 }
 @mixin bdRadiusRight($radiusItems: $radius) {
     border-top-right-radius: $radiusItems;
     border-bottom-right-radius: $radiusItems;
+}
+@mixin bdRadiusTop{
+    border-top-left-radius: $radiusImg;
+    border-top-right-radius: $radiusImg;
 }
