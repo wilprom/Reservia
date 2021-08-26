@@ -302,4 +302,47 @@ main i {
   margin-top: 70px;
 }
 
+.section_three {
+  margin-top: 30px;
+}
+
+.activityBlockCards > div {
+  width: 23.5%;
+}
+.activityBlockCards a figure {
+  box-shadow: 0px 4px 10px #D1CFCF;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin: auto;
+}
+.activityBlockCards a figure figcaption {
+  height: 40px;
+}
+.activityBlockCards a figure figcaption h4 {
+  margin: auto;
+  margin-top: 12px;
+  padding-left: 20px;
+  padding-right: 34px;
+}
+.activityBlockCards img {
+  margin: auto;
+  width: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.activityBlockCards__largeCards img {
+  height: 450px;
+}
+.activityBlockCards__mediumCard img {
+  height: 220px;
+}
+.activityBlockCards__smallCards img {
+  height: 184px;
+}
+.activityBlockCards__smallerCard img {
+  height: 150px;
+}
+
 /*# sourceMappingURL=style.css.map */

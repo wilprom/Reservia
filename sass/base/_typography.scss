@@ -10,13 +10,13 @@ nav{
     }
 }
 h3{
-    font-size: 1.5rem;
+    font-size: map-get($map: $fontSize, $key: h3);
 }
 h4{
-    font-size: 1.1rem;
+    font-size: map-get($map: $fontSize, $key: h4);
 }
 input, button{
-    font-size: 1.1rem;
+    font-size: map-get($map: $fontSize, $key: h4);
     font-weight: bold;
 }
 

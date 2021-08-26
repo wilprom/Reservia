@@ -109,7 +109,7 @@ main{
     }
     a{
         background-color: $colorWhite;
-        box-shadow:  0px 4px 10px $colorQuaternary;
+        box-shadow: $boxShadow;
         @include bdRadiusLeft;
         @include bdRadiusRight;
     }
@@ -212,3 +212,54 @@ main{
         }
     }
 }
+.section_three{
+    margin-top: 30px;
+}
+.activityBlockCards{
+    > div{
+        width: 23.5%;
+    }
+    a{
+        figure{
+            box-shadow: $boxShadow;
+            @include bdRadiusLeft;
+            @include bdRadiusRight;
+            margin: auto;
+            figcaption{
+                height: 40px;
+                h4{
+                    margin: auto;
+                    margin-top: 12px;
+                    padding-left: 20px;
+                    padding-right: 34px;
+                }
+            }
+        }
+    }
+    img{
+        margin: auto;
+        width: 100%;
+        @include bdRadiusTop;
+    }
+    &__largeCards{
+        img{
+            height: 450px;
+        }
+    }
+    &__mediumCard{
+        img{
+            height: 220px;
+        }
+    }
+    &__smallCards{
+        img{
+            height: 184px;
+        }
+    }
+    &__smallerCard{
+        img{
+            height: 150px;
+        }
+    }
+}
+
