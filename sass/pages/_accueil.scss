@@ -60,6 +60,7 @@ main{
             background-color: $colorTertiary;
         }
         &:hover{
+            transform: scale(1.05);
             i{
                 background-color: $colorWhite;
                 border: 1px solid $colorPrimary;
@@ -112,6 +113,9 @@ main{
         box-shadow: $boxShadow;
         @include bdRadiusLeft;
         @include bdRadiusRight;
+        &:hover{
+            transform: scale(1.05);
+        }
     }
     figcaption{
         .icon{
@@ -225,6 +229,9 @@ main{
             @include bdRadiusLeft;
             @include bdRadiusRight;
             margin: auto;
+            &:hover{
+                transform: scale(1.05);
+            }
             figcaption{
                 height: 40px;
                 h4{

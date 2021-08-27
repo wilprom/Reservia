@@ -19,7 +19,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-nav a:nth-last-child(1) {
+nav a {
   font-weight: bold;
 }
 
@@ -161,6 +161,9 @@ main i {
   padding-top: 14px;
   background-color: #DEEBFF;
 }
+.filtres button:hover {
+  transform: scale(1.05);
+}
 .filtres button:hover i {
   background-color: #FFFFFF;
   border: 1px solid #0065FC;
@@ -220,6 +223,9 @@ main i {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+.section_two a:hover {
+  transform: scale(1.05);
 }
 .section_two figcaption .icon--colorfulIcon {
   color: #D1CFCF;
@@ -328,6 +334,9 @@ main i {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   margin: auto;
+}
+.activityBlockCards a figure:hover {
+  transform: scale(1.05);
 }
 .activityBlockCards a figure figcaption {
   height: 40px;

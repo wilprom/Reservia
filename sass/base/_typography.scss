@@ -4,9 +4,7 @@ body{
 }
 nav{
     a{
-        &:nth-last-child(1){
-            font-weight: bold;
-        }
+        font-weight: bold;
     }
 }
 h3{
