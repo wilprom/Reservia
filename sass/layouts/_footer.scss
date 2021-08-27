@@ -1,0 +1,13 @@
+.footer{
+    background-color: $colorSecondary;
+    height: 200px;
+    margin-top: 55px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 25px 335px 0px 50px;
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
