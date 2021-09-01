@@ -2,10 +2,20 @@ main{
     i{
         color: $colorPrimary;
     }
+    @include mobile-only{
+        width: auto;
+    }
 }
 .section_one{
     div.filtres, div.info{
         margin-left: 10px;
+    }
+    @include mobile-only{
+        width: 90%;
+        margin: auto;
+        div.filtres, div.info{
+            margin-left: initial;
+        }
     }
 }
 .heading{
@@ -31,6 +41,9 @@ main{
         flex: 1;
         color: $colorWhite;
         border: 1px solid $colorPrimary;
+        i{
+            display: none;
+        }
     }
     i{
         flex: 0;
@@ -38,6 +51,29 @@ main{
         margin-left: 18px;
         margin-right: 18px;
         color: initial;        
+    }
+    @include mobile-only{
+        width: 100%;
+        input{
+            flex: 1;
+        }
+        button{
+            flex: 0;
+            margin-left: -10px;
+            @include bdRadiusLeft;
+            i{
+                display: initial;
+                color: $colorWhite;
+            }
+            span{
+                display: none;
+            }
+            &:hover{
+                i{
+                    color: $colorPrimary        
+                }
+            }
+        }
     }
 }
 .research, .research button{
@@ -47,40 +83,59 @@ main{
     margin-top: 30px;
     height: 48px;
     width: 72%;
+    >div{
+        &:nth-child(2){
+            width: 90%;
+        }
+    }
     h4{
-        margin: auto;
+        margin-top: 12.5px;
     }
     button{
         i{
-            width: 48px;
-            height: 34px;
-            margin-top: -3px;
-            margin-left: -8px;
+            width: 50px;
+            height: 30px;
+            margin: -2px 0 -2px -8px;
             padding-top: 14px;
             background-color: $colorTertiary;
-        }
-        &:hover{
-            transform: scale(1.05);
-            i{
-                background-color: $colorWhite;
-                border: 1px solid $colorPrimary;
-                height: 32px;
-                margin-top: -3px;
-            }
         }
         span{
             padding-left: 10px;
             padding-right: 10px;
+        }
+        &:hover{
+            transform: scale(1.05);
+            padding-bottom: 6px;
+            i{
+                height: 25px;
+                margin: initial;
+            }
         }
     }
     button, i{
         @include bdRadiusLeft($radiusFiltres);
         @include bdRadiusRight($radiusFiltres);
     }
+    @include mobile-only{
+        height: auto;
+        flex-wrap: wrap;
+        width: 100%;
+        >div{
+            &:nth-child(2){
+                flex-wrap: wrap;
+                width: auto;
+                button{
+                    margin-bottom: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 
 }
 .info{
     margin-top: 30px;
+    justify-content: initial;
     i{
         width: 16px;
         height: 21px;
@@ -90,8 +145,11 @@ main{
         @include bdRadiusRight;
         border: 1px solid $colorQuaternary;
     }
-    span{
-        margin-left: 10px;
+    > div{
+        &:nth-child(1){
+            margin-right: 10px;
+            margin-top: -5px;
+        }
     }
 }
 .section_two{
@@ -102,7 +160,7 @@ main{
         @include bdRadiusLeft($radiusFiltres);
         @include bdRadiusRight($radiusFiltres);
         &:nth-child(1){
-            width: 63.5%;
+            width: 63%;
         }
         &:nth-child(2){
             width: 34%;
@@ -114,13 +172,33 @@ main{
         @include bdRadiusLeft;
         @include bdRadiusRight;
         &:hover{
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
     }
     figcaption{
         .icon{
             &--colorfulIcon{
                 color: $colorQuaternary;
+            }
+        }
+    }
+    @include mobile-only{
+        flex-direction: column;
+        width: auto;
+        height: auto; 
+        > div{
+            &:nth-child(1){
+                order: 2;
+                width: 90%;
+                margin: auto;
+                padding-bottom: 30px;
+                background-color: initial;
+            }
+            &:nth-child(2){
+                order: 1;
+                width: auto;
+                padding-bottom: 40px;
+                border-radius: initial;
             }
         }
     }
@@ -143,6 +221,9 @@ main{
         h4{
             margin-bottom: 0px;
         }
+    }
+    @include mobile-only{
+        width: auto;
     }
 }
 .line-hostingCards-std{
@@ -173,15 +254,34 @@ main{
             }
         }
     }
+    @include mobile-only{
+        flex-direction: column;
+        height: 740px;
+        a{
+            width: auto;
+        }
+    }
 }
 .hostingBlock-pop{
     width: 88%;
     margin: auto;
     margin-top: 30px;
-    > div:nth-child(1){
-        i{
-            margin-left: 129px;
-            color: initial;
+    > div{
+        &:nth-child(1){
+            margin-top: -25px;
+            i{  
+                color: initial;
+            }
+        }
+    }
+    @include mobile-only{
+        width: auto;
+        > div{
+            &:nth-child(1){
+                width: 90%;
+                margin: auto;
+                margin-top: -25px;
+            }
         }
     }
 }
@@ -215,9 +315,21 @@ main{
             }
         }
     }
+    @include mobile-only{
+        height: 600px;
+        a{
+            width: 90%;
+            margin: auto;
+        }
+    }
 }
 .section_three{
     margin-top: 30px;
+    @include mobile-only{
+        width: 90%;
+        margin: auto;
+        height: auto; 
+    }
 }
 .activityBlockCards{
     > div{
@@ -230,7 +342,7 @@ main{
             @include bdRadiusRight;
             margin: auto;
             &:hover{
-                transform: scale(1.05);
+                transform: scale(1.02);
             }
             figcaption{
                 height: 40px;
@@ -251,6 +363,9 @@ main{
     &__largeCards{
         img{
             height: 450px;
+            &:nth-child(2){
+                display: none;
+            }
         }
     }
     &__mediumCard{
@@ -266,6 +381,33 @@ main{
     &__smallerCard{
         img{
             height: 150px;
+        }
+    }
+    @include mobile-only{
+        flex-direction: column;
+        height: 1565px;
+        > div{
+            width: auto;
+            &:nth-child(2), &:nth-child(4){
+                div{
+                    &:nth-child(1){
+                        padding-bottom: 25px;
+                    }
+                }
+            }
+        }
+        img{
+            height: 180px;
+        }
+        &__largeCards{
+            img{
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: initial;
+                }
+            }
         }
     }
 }

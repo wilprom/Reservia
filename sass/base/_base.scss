@@ -10,4 +10,14 @@ body{
         text-decoration: none;
         color: initial;
     }
+    @include mobile-only{
+        header{
+            width: initial;
+            margin: initial;
+        }
+        main{
+            width: initial;
+            margin: initial;
+        }
+    }
 }

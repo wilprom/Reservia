@@ -4,15 +4,16 @@ $colorSecondary: #F2F2F2;
 $colorTertiary: #DEEBFF;
 $colorQuaternary: #D1CFCF;
 
-$mainWidth:1260px;
+$mainWidth: 1260px;
 
-$radius:15px;
-$radiusFiltres:25px;
-$radiusImg:13px;
+$radius: 15px;
+$radiusFiltres: 25px;
+$radiusImg: 13px;
 
 $boxShadow: 0px 4px 10px $colorQuaternary;
 
 $fontSize: (
-    h3:1.5rem,
-    h4:1.1rem
+    h3: 1.5rem,
+    h4: 1.1rem,
+    button: 1rem
 );

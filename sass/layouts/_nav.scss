@@ -1,21 +1,47 @@
 .nav{
     height: 80px;
     justify-content: initial;
-    a{
+    &__link{
         padding: 35px 40px 5px 40px;
-        &:nth-child(2), &:nth-last-child(1){
-            padding-top: 40px;
-        }
-        &:hover{
-            color: $colorPrimary;
-            border-top: 3px solid $colorPrimary;
-            background-color: $colorTertiary;
+        &:nth-child(1){
+            a{
+                color: $colorPrimary;
+            }
         }
         &:nth-child(1){
             border-top: 3px solid $colorPrimary;
         }
-        &:nth-child(1), &:nth-last-child(1){
-            color: $colorPrimary;
+        &:nth-child(2){
+            padding-top: 40px;
         }
+        &:hover{
+            &:nth-child(2){
+                a{
+                    color: $colorPrimary;
+                }
+            }
+            border-top: 3px solid $colorPrimary;
+            background-color: $colorTertiary;
+        }
+    }
+    @include mobile-only{
+        order: 3;
+        width: 100%;
+        &__link{
+            width: 50%;
+            text-align: center;
+            &:nth-child(1){
+                border-top: none;
+                border-bottom: 3px solid $colorPrimary;
+            }
+            &:nth-child(2){
+                padding-top: 35px;
+                border-bottom: 3px solid $colorQuaternary;
+            }
+            &:hover{
+                border-top: none;
+                border-bottom: 3px solid $colorPrimary;
+            }
+        }            
     }
 }

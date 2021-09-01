@@ -14,12 +14,22 @@ body a {
   text-decoration: none;
   color: initial;
 }
+@media screen and (max-width: 599px) {
+  body header {
+    width: initial;
+    margin: initial;
+  }
+  body main {
+    width: initial;
+    margin: initial;
+  }
+}
 
 body {
   font-family: "Raleway", sans-serif;
 }
 
-nav a {
+header a, nav a {
   font-weight: bold;
 }
 
@@ -32,8 +42,8 @@ h4 {
 }
 
 input, button {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .btn {
@@ -62,49 +72,124 @@ input, button {
 }
 
 .header__logo {
-  margin-top: 9px;
+  flex: 1;
+  padding-top: 20px;
+}
+.header__signUp {
+  padding: 40px 40px 5px 40px;
+}
+.header__signUp a {
+  color: #0065FC;
+}
+.header__signUp:hover {
+  border-top: 3px solid #0065FC;
+  background-color: #DEEBFF;
+}
+@media screen and (max-width: 599px) {
+  .header {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .header__logo {
+    order: 1;
+    padding-left: 20px;
+  }
+  .header__signUp {
+    order: 2;
+    padding-right: 30px;
+  }
+  .header__signUp:hover {
+    border-top: initial;
+    background-color: initial;
+  }
 }
 
 .nav {
   height: 80px;
   justify-content: initial;
 }
-.nav a {
+.nav__link {
   padding: 35px 40px 5px 40px;
 }
-.nav a:nth-child(2), .nav a:nth-last-child(1) {
+.nav__link:nth-child(1) a {
+  color: #0065FC;
+}
+.nav__link:nth-child(1) {
+  border-top: 3px solid #0065FC;
+}
+.nav__link:nth-child(2) {
   padding-top: 40px;
 }
-.nav a:hover {
-  color: #0065FC;
+.nav__link:hover {
   border-top: 3px solid #0065FC;
   background-color: #DEEBFF;
 }
-.nav a:nth-child(1) {
-  border-top: 3px solid #0065FC;
-}
-.nav a:nth-child(1), .nav a:nth-last-child(1) {
+.nav__link:hover:nth-child(2) a {
   color: #0065FC;
+}
+@media screen and (max-width: 599px) {
+  .nav {
+    order: 3;
+    width: 100%;
+  }
+  .nav__link {
+    width: 50%;
+    text-align: center;
+  }
+  .nav__link:nth-child(1) {
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+  }
+  .nav__link:nth-child(2) {
+    padding-top: 35px;
+    border-bottom: 3px solid #D1CFCF;
+  }
+  .nav__link:hover {
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+  }
 }
 
 .footer {
   background-color: #F2F2F2;
   height: 200px;
   margin-top: 55px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 25px 335px 0px 50px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 25px 335px 0 50px;
 }
 .footer a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 599px) {
+  .footer {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 30px 0 30px 25px;
+  }
 }
 
 main i {
   color: #0065FC;
 }
+@media screen and (max-width: 599px) {
+  main {
+    width: auto;
+  }
+}
 
 .section_one div.filtres, .section_one div.info {
   margin-left: 10px;
+}
+@media screen and (max-width: 599px) {
+  .section_one {
+    width: 90%;
+    margin: auto;
+  }
+  .section_one div.filtres, .section_one div.info {
+    margin-left: initial;
+  }
 }
 
 .heading h3 {
@@ -132,12 +217,39 @@ main i {
   color: #FFFFFF;
   border: 1px solid #0065FC;
 }
+.research button i {
+  display: none;
+}
 .research i {
   flex: 0;
   margin: auto;
   margin-left: 18px;
   margin-right: 18px;
   color: initial;
+}
+@media screen and (max-width: 599px) {
+  .research {
+    width: 100%;
+  }
+  .research input {
+    flex: 1;
+  }
+  .research button {
+    flex: 0;
+    margin-left: -10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .research button i {
+    display: initial;
+    color: #FFFFFF;
+  }
+  .research button span {
+    display: none;
+  }
+  .research button:hover i {
+    color: #0065FC;
+  }
 }
 
 .research, .research button {
@@ -150,29 +262,30 @@ main i {
   height: 48px;
   width: 72%;
 }
+.filtres > div:nth-child(2) {
+  width: 90%;
+}
 .filtres h4 {
-  margin: auto;
+  margin-top: 12.5px;
 }
 .filtres button i {
-  width: 48px;
-  height: 34px;
-  margin-top: -3px;
-  margin-left: -8px;
+  width: 50px;
+  height: 30px;
+  margin: -2px 0 -2px -8px;
   padding-top: 14px;
   background-color: #DEEBFF;
-}
-.filtres button:hover {
-  transform: scale(1.05);
-}
-.filtres button:hover i {
-  background-color: #FFFFFF;
-  border: 1px solid #0065FC;
-  height: 32px;
-  margin-top: -3px;
 }
 .filtres button span {
   padding-left: 10px;
   padding-right: 10px;
+}
+.filtres button:hover {
+  transform: scale(1.05);
+  padding-bottom: 6px;
+}
+.filtres button:hover i {
+  height: 25px;
+  margin: initial;
 }
 .filtres button, .filtres i {
   border-top-left-radius: 25px;
@@ -180,9 +293,25 @@ main i {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+@media screen and (max-width: 599px) {
+  .filtres {
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .filtres > div:nth-child(2) {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .filtres > div:nth-child(2) button {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+}
 
 .info {
   margin-top: 30px;
+  justify-content: initial;
 }
 .info i {
   width: 16px;
@@ -195,8 +324,9 @@ main i {
   border-bottom-right-radius: 15px;
   border: 1px solid #D1CFCF;
 }
-.info span {
-  margin-left: 10px;
+.info > div:nth-child(1) {
+  margin-right: 10px;
+  margin-top: -5px;
 }
 
 .section_two {
@@ -211,7 +341,7 @@ main i {
   border-bottom-right-radius: 25px;
 }
 .section_two > div:nth-child(1) {
-  width: 63.5%;
+  width: 63%;
 }
 .section_two > div:nth-child(2) {
   width: 34%;
@@ -225,10 +355,30 @@ main i {
   border-bottom-right-radius: 15px;
 }
 .section_two a:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .section_two figcaption .icon--colorfulIcon {
   color: #D1CFCF;
+}
+@media screen and (max-width: 599px) {
+  .section_two {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+  .section_two > div:nth-child(1) {
+    order: 2;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+    background-color: initial;
+  }
+  .section_two > div:nth-child(2) {
+    order: 1;
+    width: auto;
+    padding-bottom: 40px;
+    border-radius: initial;
+  }
 }
 
 .hostingBlock-std {
@@ -248,6 +398,11 @@ main i {
 }
 .hostingBlock-std > div:nth-last-child(1) h4 {
   margin-bottom: 0px;
+}
+@media screen and (max-width: 599px) {
+  .hostingBlock-std {
+    width: auto;
+  }
 }
 
 .line-hostingCards-std a {
@@ -278,15 +433,36 @@ main i {
 .line-hostingCards-std a figure figcaption div {
   margin-top: -10px;
 }
+@media screen and (max-width: 599px) {
+  .line-hostingCards-std {
+    flex-direction: column;
+    height: 740px;
+  }
+  .line-hostingCards-std a {
+    width: auto;
+  }
+}
 
 .hostingBlock-pop {
   width: 88%;
   margin: auto;
   margin-top: 30px;
 }
+.hostingBlock-pop > div:nth-child(1) {
+  margin-top: -25px;
+}
 .hostingBlock-pop > div:nth-child(1) i {
-  margin-left: 129px;
   color: initial;
+}
+@media screen and (max-width: 599px) {
+  .hostingBlock-pop {
+    width: auto;
+  }
+  .hostingBlock-pop > div:nth-child(1) {
+    width: 90%;
+    margin: auto;
+    margin-top: -25px;
+  }
 }
 
 .column-hostingCards-pop {
@@ -319,9 +495,25 @@ main i {
 .column-hostingCards-pop a figure figcaption div {
   margin-top: 70px;
 }
+@media screen and (max-width: 599px) {
+  .column-hostingCards-pop {
+    height: 600px;
+  }
+  .column-hostingCards-pop a {
+    width: 90%;
+    margin: auto;
+  }
+}
 
 .section_three {
   margin-top: 30px;
+}
+@media screen and (max-width: 599px) {
+  .section_three {
+    width: 90%;
+    margin: auto;
+    height: auto;
+  }
 }
 
 .activityBlockCards > div {
@@ -336,7 +528,7 @@ main i {
   margin: auto;
 }
 .activityBlockCards a figure:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .activityBlockCards a figure figcaption {
   height: 40px;
@@ -356,6 +548,9 @@ main i {
 .activityBlockCards__largeCards img {
   height: 450px;
 }
+.activityBlockCards__largeCards img:nth-child(2) {
+  display: none;
+}
 .activityBlockCards__mediumCard img {
   height: 220px;
 }
@@ -364,6 +559,27 @@ main i {
 }
 .activityBlockCards__smallerCard img {
   height: 150px;
+}
+@media screen and (max-width: 599px) {
+  .activityBlockCards {
+    flex-direction: column;
+    height: 1565px;
+  }
+  .activityBlockCards > div {
+    width: auto;
+  }
+  .activityBlockCards > div:nth-child(2) div:nth-child(1), .activityBlockCards > div:nth-child(4) div:nth-child(1) {
+    padding-bottom: 25px;
+  }
+  .activityBlockCards img {
+    height: 180px;
+  }
+  .activityBlockCards__largeCards img:nth-child(1) {
+    display: none;
+  }
+  .activityBlockCards__largeCards img:nth-child(2) {
+    display: initial;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
