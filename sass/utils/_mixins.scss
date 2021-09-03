@@ -15,6 +15,9 @@
     border-top-left-radius: $radiusImg;
     border-top-right-radius: $radiusImg;
 }
+@mixin bdRadius($radiusItems: $radius) {
+    border-radius: $radiusItems;
+}
 
 @mixin mobile-only {
     @media screen and (max-width: 599px) {
@@ -22,7 +25,17 @@
     }
 }
 @mixin tablette-only {
-    @media screen and (min-width: 768px) and (max-width: 991px) {
+    @media screen and (min-width: 600px) and (max-width: 991px) {
         @content;
     }   
+}
+@mixin mobile-and-tablette {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin laptop-desktop {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
 }

@@ -8,25 +8,27 @@
         a{
             color: $colorPrimary;
         }
-        &:hover{        
-            border-top: 3px solid $colorPrimary;
-            background-color: $colorTertiary;
+    }
+    @include mobile-only{
+        flex-wrap: wrap;
+        &__logo{
+            order: 1;
+        }
+        &__signUp{
+            order: 2;
         }
     }
     @include mobile-only{
         width: 100%;
-        flex-wrap: wrap;
         &__logo{
-            order: 1;
             padding-left: 20px;
         }
         &__signUp{
-            order: 2;
             padding-right: 30px;
-            &:hover{
-                border-top: initial;
-                background-color: initial;
-            }
         }
+    }
+    @include tablette-only{
+        width: 93.5%;
+        margin: auto;
     }
 }

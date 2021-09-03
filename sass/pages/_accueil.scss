@@ -2,7 +2,7 @@ main{
     i{
         color: $colorPrimary;
     }
-    @include mobile-only{
+    @include mobile-and-tablette{
         width: auto;
     }
 }
@@ -10,8 +10,8 @@ main{
     div.filtres, div.info{
         margin-left: 10px;
     }
-    @include mobile-only{
-        width: 90%;
+    @include mobile-and-tablette{
+        width: 93.5%;
         margin: auto;
         div.filtres, div.info{
             margin-left: initial;
@@ -52,8 +52,7 @@ main{
         margin-right: 18px;
         color: initial;        
     }
-    @include mobile-only{
-        width: 100%;
+    @include mobile-and-tablette{
         input{
             flex: 1;
         }
@@ -74,6 +73,12 @@ main{
                 }
             }
         }
+    }
+    @include mobile-only{
+        width: 100%;
+    }
+    @include tablette-only{
+        width: 60%; 
     }
 }
 .research, .research button{
@@ -113,10 +118,9 @@ main{
         }
     }
     button, i{
-        @include bdRadiusLeft($radiusFiltres);
-        @include bdRadiusRight($radiusFiltres);
+        @include bdRadius($radiusFiltres);
     }
-    @include mobile-only{
+    @include mobile-and-tablette{
         height: auto;
         flex-wrap: wrap;
         width: 100%;
@@ -125,13 +129,21 @@ main{
                 flex-wrap: wrap;
                 width: auto;
                 button{
-                    margin-bottom: 10px;
                     margin-right: 10px;
                 }
             }
         }
     }
-
+    @include mobile-only{
+        button{
+            margin-bottom: 10px;  
+        }
+    }
+    @include tablette-only{
+        button{
+            margin-bottom: 20px;
+        }
+    }
 }
 .info{
     margin-top: 30px;
@@ -141,8 +153,7 @@ main{
         height: 21px;
         padding-top: 5px;
         padding-left: 10px;
-        @include bdRadiusLeft;
-        @include bdRadiusRight;
+        @include bdRadius;
         border: 1px solid $colorQuaternary;
     }
     > div{
@@ -157,8 +168,7 @@ main{
     height: 700px;
     > div{
         background-color: $colorSecondary;
-        @include bdRadiusLeft($radiusFiltres);
-        @include bdRadiusRight($radiusFiltres);
+        @include bdRadius($radiusFiltres);
         &:nth-child(1){
             width: 63%;
         }
@@ -169,8 +179,7 @@ main{
     a{
         background-color: $colorWhite;
         box-shadow: $boxShadow;
-        @include bdRadiusLeft;
-        @include bdRadiusRight;
+        @include bdRadius;
         &:hover{
             transform: scale(1.02);
         }
@@ -182,14 +191,13 @@ main{
             }
         }
     }
-    @include mobile-only{
+    @include mobile-and-tablette{
         flex-direction: column;
         width: auto;
-        height: auto; 
+        height: auto;
         > div{
             &:nth-child(1){
                 order: 2;
-                width: 90%;
                 margin: auto;
                 padding-bottom: 30px;
                 background-color: initial;
@@ -199,6 +207,20 @@ main{
                 width: auto;
                 padding-bottom: 40px;
                 border-radius: initial;
+            }
+        }
+    }
+    @include mobile-only{
+        > div{
+            &:nth-child(1){
+                width: 90%;  
+            }
+        }
+    }
+    @include tablette-only{
+        > div{
+            &:nth-child(1){
+                width: 100%;
             }
         }
     }
@@ -213,11 +235,10 @@ main{
             margin-top: 0px;
         }
     }
-    > div:nth-child(3){
+    > div:nth-child(3), div:nth-last-child(1){
         margin-top: 20px;
     }
     > div:nth-last-child(1){
-        margin-top: 20px;
         h4{
             margin-bottom: 0px;
         }
@@ -234,9 +255,13 @@ main{
             width: 96%;
             margin-top: 5px;
             margin-bottom: 10px;
+            .img-stdCards{
+                width: 100%;
+                height: 125px;
+            }
             img{
                 width: 100%;
-                height: 140px;
+                height: 100%;
                 @include bdRadiusTop;
             }
             figcaption{
@@ -281,8 +306,11 @@ main{
                 width: 90%;
                 margin: auto;
                 margin-top: -25px;
-            }
-        }
+            }  
+        }    
+    }
+    @include tablette-only{
+        width: 93.5%;
     }
 }
 .column-hostingCards-pop{
@@ -293,9 +321,13 @@ main{
             width: 97.5%;
             margin-top: 5px;
             margin-bottom: 5px;
-            img{
-                width: 42%;
+            .img-popCards{
+                width: 41%;
                 height: 170px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
                 @include bdRadiusLeft($radiusImg);
             }
             figcaption{
@@ -325,10 +357,15 @@ main{
 }
 .section_three{
     margin-top: 30px;
-    @include mobile-only{
-        width: 90%;
+    @include mobile-and-tablette{
         margin: auto;
         height: auto; 
+    }
+    @include mobile-only{
+        width: 90%;
+    }
+    @include tablette-only{
+        width: 93.5%;
     }
 }
 .activityBlockCards{
@@ -338,8 +375,7 @@ main{
     a{
         figure{
             box-shadow: $boxShadow;
-            @include bdRadiusLeft;
-            @include bdRadiusRight;
+            @include bdRadius;
             margin: auto;
             &:hover{
                 transform: scale(1.02);
@@ -383,6 +419,18 @@ main{
             height: 150px;
         }
     }
+    @include mobile-and-tablette{
+        &__largeCards{
+            img{
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: initial;
+                }
+            }
+        }
+    }
     @include mobile-only{
         flex-direction: column;
         height: 1565px;
@@ -399,15 +447,23 @@ main{
         img{
             height: 180px;
         }
-        &__largeCards{
-            img{
-                &:nth-child(1){
-                    display: none;
-                }
-                &:nth-child(2){
-                    display: initial;
+    }
+    @include tablette-only{
+        flex-wrap: wrap;
+        height: auto;
+        > div{
+            width: 100%;
+            margin: auto;
+            margin-bottom: 25px;
+            &:nth-child(2), &:nth-child(4){
+                flex-direction: row;
+                div{
+                    width: 48%;
                 }
             }
+        }
+        img{
+            height: 220px;
         }
     }
 }

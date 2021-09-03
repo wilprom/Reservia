@@ -1,21 +1,14 @@
 body{
-    margin: 0px;
-    header{
-        @include mainBlockPosition;
-    }
-    main{
+    margin: 0;
+    header, main{
         @include mainBlockPosition;
     }
     a{
         text-decoration: none;
         color: initial;
     }
-    @include mobile-only{
-        header{
-            width: initial;
-            margin: initial;
-        }
-        main{
+    @include mobile-and-tablette{
+        header, main{
             width: initial;
             margin: initial;
         }
