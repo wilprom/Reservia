@@ -25,7 +25,7 @@ header a, nav a {
   font-weight: bold;
 }
 
-h3 {
+h3, .icon-pop {
   font-size: 1.5rem;
 }
 
@@ -506,6 +506,10 @@ main i {
 }
 .hostingBlock-pop > div:nth-child(1) {
   margin-top: -25px;
+}
+.hostingBlock-pop > div:nth-child(1) .icon-pop {
+  margin: auto;
+  margin-right: 0;
 }
 .hostingBlock-pop > div:nth-child(1) i {
   color: initial;

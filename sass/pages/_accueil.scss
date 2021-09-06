@@ -329,6 +329,10 @@ main{
     > div{
         &:nth-child(1){
             margin-top: -25px;
+            .icon-pop{
+                margin: auto;
+                margin-right: 0;
+            }
             i{  
                 color: initial;
             }
