@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 body header, body main {
-  width: 1260px;
+  width: 92.5%;
   margin: auto;
 }
 body a {
@@ -328,6 +328,18 @@ main i {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1240px) {
+  .filtres {
+    height: auto;
+  }
+  .filtres > div:nth-child(2) {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .filtres > div:nth-child(2) button {
+    margin: 0 15px 25px 12px;
+  }
+}
 
 .info {
   margin-top: 30px;
@@ -400,6 +412,24 @@ main i {
     width: 100%;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1240px) {
+  .section_two {
+    flex-direction: column;
+    height: auto;
+  }
+  .section_two > div:nth-child(1) {
+    order: 2;
+    padding-bottom: 35px;
+  }
+  .section_two > div:nth-child(2) {
+    order: 1;
+    padding-bottom: 45px;
+    margin-bottom: 25px;
+  }
+  .section_two > div:nth-child(1), .section_two > div:nth-child(2) {
+    width: auto;
+  }
+}
 
 .hostingBlock-std {
   width: 93.5%;
@@ -461,6 +491,11 @@ main i {
   }
   .line-hostingCards-std a {
     width: auto;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1240px) {
+  .line-hostingCards-std .img-stdCards {
+    height: 150px;
   }
 }
 
@@ -573,7 +608,6 @@ main i {
   margin: auto;
   margin-top: 12px;
   padding-left: 20px;
-  padding-right: 34px;
 }
 .activityBlockCards img {
   margin: auto;
@@ -596,7 +630,7 @@ main i {
 .activityBlockCards__smallerCard img {
   height: 150px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1240px) {
   .activityBlockCards__largeCards img:nth-child(1) {
     display: none;
   }
@@ -619,7 +653,7 @@ main i {
     height: 180px;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 991px) {
+@media screen and (min-width: 600px) and (max-width: 1240px) {
   .activityBlockCards {
     flex-wrap: wrap;
     height: auto;
@@ -637,6 +671,11 @@ main i {
   }
   .activityBlockCards img {
     height: 220px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1240px) {
+  .activityBlockCards img {
+    height: 280px;
   }
 }
 

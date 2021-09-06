@@ -35,7 +35,17 @@
     }
 }
 @mixin laptop-desktop {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) and (max-width: 1240px) {
+        @content;
+    }
+}
+@mixin tablette-pc {
+    @media screen and (min-width: 600px) and (max-width: 1240px){
+        @content;
+    }
+}
+@mixin mobile-tablette-pc {
+    @media screen and (max-width: 1240px) {
         @content;
     }
 }
