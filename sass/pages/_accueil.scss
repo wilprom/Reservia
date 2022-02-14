@@ -292,6 +292,7 @@ main{
             img{
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
                 @include bdRadiusTop;
             }
             figcaption{
@@ -367,6 +368,7 @@ main{
             img{
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
                 @include bdRadiusLeft($radiusImg);
             }
             figcaption{
@@ -391,6 +393,11 @@ main{
         a{
             width: 90%;
             margin: auto;
+        }
+        figcaption{
+            div{
+                margin-top: 58px !important; 
+            }
         }
     }
 }
@@ -432,6 +439,7 @@ main{
     img{
         margin: auto;
         width: 100%;
+        object-fit: cover;
         @include bdRadiusTop;
     }
     &__largeCards{
