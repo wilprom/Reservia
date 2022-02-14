@@ -1,4 +1,6 @@
 .footer{
+    @include flexbox(row);
+    justify-content: space-between;
     background-color: $colorSecondary;
     height: 200px;
     margin-top: 55px;

@@ -40,11 +40,11 @@
     <!--LINK-->
 </head>
 <body>
-    <header class="header container container--horizontalsItems">
+    <header class="header">
         <div class="header__logo">
             <img src="../img/reservia_logo.svg" alt="logo">
         </div>
-        <nav class="nav container container--horizontalsItems">
+        <nav class="nav">
             <div class="nav__link"><a href="#section_two">Hébergements</a></div>
             <div class="nav__link"><a href="#section_three">Activités</a></div>      
         </nav>
@@ -53,11 +53,11 @@
     <main>
         <!--SECTION 1-->
         <section id="section_one" class="section_one">
-            <div class="heading container container--verticalsItems">
+            <div class="heading">
                 <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
-            <div class="research container container--horizontalsItems">
+            <div class="research">
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="search" name="Research" id="Research" placeholder="Marseille, France" maxlength="25">
                 <button type="submit" class="btn btn--colored">
@@ -65,9 +65,9 @@
                     <span>Rechercher</span>
                 </button>
             </div>
-            <div class="filtres container container--horizontalsItems">
+            <div class="filtres">
                 <div><h4>Filtres</h4></div>
-                <div class="container container--horizontalsItems">
+                <div>
                     <button type="submit" class="btn">
                         <i class="fas fa-money-bill-wave"></i>
                         <span>Économique</span> 
@@ -89,19 +89,19 @@
                     </button>
                 </div>
             </div>
-            <div class="info container container--horizontalsItems">
+            <div class="info">
                 <div><i class="fas fa-info"></i></div>
                 <div>Plus de 500 logements sont disponibles dans cette ville</div>
             </div>    
         </section>
         <!--SECTION 1-->
         <!--SECTION 2-->
-        <section id="section_two" class="section_two container container--horizontalsItems">
+        <section id="section_two" class="section_two">
             <div>
-                <div class="hostingBlock-std container container--verticalsItems">
+                <div class="hostingBlock-std">
                     <div><h3>Hébergements à Marseille</h3></div>
                     <!--line-hostingCards-std-->
-                    <div class="line-hostingCards-std container container--horizontalsItems">
+                    <div class="line-hostingCards-std">
                         <a href="#">
                             <figure>
                                 <div class="img-stdCards">
@@ -159,7 +159,7 @@
                     </div>
                     <!--line-hostingCards-std-->
                     <!--line-hostingCards-std-->
-                    <div class="line-hostingCards-std container container--horizontalsItems">
+                    <div class="line-hostingCards-std">
                         <a href="#">
                             <figure>
                                 <div class="img-stdCards">
@@ -221,20 +221,22 @@
             </div>
             <div>
                 <div class="hostingBlock-pop">
-                    <div class="container container--horizontalsItems">
+                    <div>
                         <h3>Les plus populaires</h3>
                         <div class="icon-pop"><i class="fas fa-chart-line"></i></div>
                     </div>
                     <!--column-hostingCards-pop--> 
-                    <div class="column-hostingCards-pop container container--verticalsItems">
+                    <div class="column-hostingCards-pop">
                         <a href="#">
-                            <figure class="container container--horizontalsItems">
+                            <figure>
                                 <div class="img-popCards">
                                     <img src="../img/hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="chambre">
                                 </div>
                                 <figcaption>
-                                    <h4>Hôtel le soleil du matin</h4>
-                                    <p>Nuit à partir de 128€</p>
+                                    <div>
+                                        <h4>Hôtel le soleil du matin</h4>
+                                        <p>Nuit à partir de 128€</p>
+                                    </div>
                                     <div class="icon">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -246,13 +248,15 @@
                             </figure>
                         </a>
                         <a href="#">
-                            <figure class="container container--horizontalsItems">
+                            <figure>
                                 <div class="img-popCards">
                                     <img src="../img/hosting/small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="chambre">
                                 </div>
                                 <figcaption>
-                                    <h4>Au cœur de l'eau Chambre d'hôtes</h4>
-                                    <p>Nuit à partir de 71€</p>
+                                    <div>
+                                        <h4>Au cœur de l'eau Chambre d'hôtes</h4>
+                                        <p>Nuit à partir de 71€</p>
+                                    </div>
                                     <div class="icon">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -264,13 +268,15 @@
                             </figure>
                         </a>
                         <a href="#">
-                            <figure class="container container--horizontalsItems">
+                            <figure>
                                 <div class="img-popCards">
                                     <img src="../img/hosting/small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="chambre">
                                 </div>
                                 <figcaption>
-                                    <h4>Hôtel tout bleu et Blanc</h4>
-                                    <p>Nuit à partir de 68€</p>
+                                    <div>
+                                        <h4>Hôtel tout bleu et Blanc</h4>
+                                        <p>Nuit à partir de 68€</p>
+                                    </div>
                                     <div class="icon">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -288,9 +294,9 @@
         </section>
         <!--SECTION 2-->
         <!--SECTION 3-->
-        <section id="section_three" class="section_three container container--verticalsItems">
+        <section id="section_three" class="section_three">
             <div><h3>Activités à Marseille</h3></div>
-            <div class="activityBlockCards container container--horizontalsItems">
+            <div class="activityBlockCards">
                 <div class="activityBlockCards__largeCards">
                     <a href="#">
                         <figure>
@@ -300,7 +306,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="container container--verticalsItems">
+                <div>
                     <div class="activityBlockCards__mediumCard">
                         <a href="#">
                             <figure>
@@ -327,7 +333,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="container container--verticalsItems">
+                <div>
                     <div class="activityBlockCards__smallCards">
                         <a href="#">
                             <figure>
@@ -349,7 +355,7 @@
         </section>
         <!--SECTION 3-->
     </main>
-    <footer class="footer container container--horizontalsItems">
+    <footer class="footer">
         <div>
             <h4>A propos</h4>
             <p><a href="#">Fonctionnement du site</a></p>

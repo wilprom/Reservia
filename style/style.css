@@ -52,17 +52,10 @@ input, button {
   cursor: pointer;
 }
 
-.container {
+.header {
   display: flex;
-  justify-content: space-between;
-}
-.container--horizontalsItems {
   flex-direction: row;
 }
-.container--verticalsItems {
-  flex-direction: column;
-}
-
 .header__logo {
   flex: 1;
   padding-top: 20px;
@@ -97,14 +90,15 @@ input, button {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .header {
-    width: 93.5%;
+    width: 94%;
     margin: auto;
   }
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
   height: 80px;
-  justify-content: initial;
 }
 .nav__link {
   padding: 35px 40px 5px 40px;
@@ -149,6 +143,9 @@ input, button {
 }
 
 .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #F2F2F2;
   height: 200px;
   margin-top: 55px;
@@ -199,6 +196,10 @@ main i {
   }
 }
 
+.heading {
+  display: flex;
+  flex-direction: column;
+}
 .heading h3 {
   margin-bottom: 8px;
 }
@@ -207,9 +208,10 @@ main i {
 }
 
 .research {
+  display: flex;
+  flex-direction: row;
   width: 32%;
   height: 50px;
-  justify-content: initial;
   background-color: #F2F2F2;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -272,12 +274,18 @@ main i {
 }
 
 .filtres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 30px;
   height: 48px;
   width: 72%;
 }
 .filtres > div:nth-child(2) {
   width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .filtres h4 {
   margin-top: 12.5px;
@@ -342,8 +350,9 @@ main i {
 }
 
 .info {
+  display: flex;
+  flex-direction: row;
   margin-top: 30px;
-  justify-content: initial;
 }
 .info i {
   width: 16px;
@@ -359,6 +368,9 @@ main i {
 }
 
 .section_two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 30px;
   height: 700px;
 }
@@ -432,10 +444,11 @@ main i {
 }
 
 .hostingBlock-std {
+  display: flex;
+  flex-direction: column;
   width: 93.5%;
   margin: auto;
   margin-top: 30px;
-  justify-content: initial;
 }
 .hostingBlock-std > div:nth-child(1) h3 {
   margin-top: 0px;
@@ -452,8 +465,10 @@ main i {
   }
 }
 
-.line-hostingCards-std a {
-  width: 31.5%;
+.line-hostingCards-std {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
 }
 .line-hostingCards-std a figure {
   margin: auto;
@@ -487,16 +502,8 @@ main i {
 }
 @media screen and (max-width: 599px) {
   .line-hostingCards-std {
-    flex-direction: column;
-    height: 740px;
-  }
-  .line-hostingCards-std a {
-    width: auto;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1240px) {
-  .line-hostingCards-std .img-stdCards {
-    height: 150px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
   }
 }
 
@@ -506,6 +513,8 @@ main i {
   margin-top: 30px;
 }
 .hostingBlock-pop > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
   margin-top: -25px;
 }
 .hostingBlock-pop > div:nth-child(1) .icon-pop {
@@ -527,21 +536,22 @@ main i {
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .hostingBlock-pop {
-    width: 93.5%;
+    width: 94%;
   }
 }
 
 .column-hostingCards-pop {
-  height: 580px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 20px;
 }
 .column-hostingCards-pop a figure {
-  margin: auto;
-  width: 97.5%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
 }
 .column-hostingCards-pop a figure .img-popCards {
-  width: 41%;
   height: 170px;
 }
 .column-hostingCards-pop a figure img {
@@ -552,34 +562,26 @@ main i {
   border-bottom-left-radius: 13px;
 }
 .column-hostingCards-pop a figure figcaption {
-  width: 58%;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.column-hostingCards-pop a figure figcaption h4 {
-  margin-top: 5px;
+.column-hostingCards-pop a figure figcaption h4, .column-hostingCards-pop a figure figcaption p {
+  margin: 0;
 }
 .column-hostingCards-pop a figure figcaption p {
-  margin-top: -20px;
-}
-.column-hostingCards-pop a figure figcaption div {
-  margin-top: 70px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 599px) {
-  .column-hostingCards-pop {
-    height: 600px;
-  }
   .column-hostingCards-pop a {
     width: 90%;
     margin: auto;
   }
-  .column-hostingCards-pop figcaption div {
-    margin-top: 58px !important;
-  }
 }
 
 .section_three {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
 }
 @media screen and (max-width: 991px) {
@@ -599,8 +601,10 @@ main i {
   }
 }
 
-.activityBlockCards > div {
-  width: 23.5%;
+.activityBlockCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
 }
 .activityBlockCards a figure {
   box-shadow: 0px 4px 10px #D1CFCF;
@@ -631,6 +635,11 @@ main i {
 .activityBlockCards__largeCards img:nth-child(2) {
   display: none;
 }
+.activityBlockCards div:nth-child(2), .activityBlockCards div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .activityBlockCards__mediumCard img {
   height: 220px;
 }
@@ -641,6 +650,11 @@ main i {
   height: 150px;
 }
 @media screen and (max-width: 1240px) {
+  .activityBlockCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
   .activityBlockCards__largeCards img:nth-child(1) {
     display: none;
   }
@@ -649,15 +663,11 @@ main i {
   }
 }
 @media screen and (max-width: 599px) {
-  .activityBlockCards {
-    flex-direction: column;
-    height: 1565px;
-  }
   .activityBlockCards > div {
     width: auto;
   }
   .activityBlockCards > div:nth-child(2) div:nth-child(1), .activityBlockCards > div:nth-child(4) div:nth-child(1) {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
   .activityBlockCards img {
     height: 180px;
@@ -665,7 +675,6 @@ main i {
 }
 @media screen and (min-width: 600px) and (max-width: 1240px) {
   .activityBlockCards {
-    flex-wrap: wrap;
     height: auto;
   }
   .activityBlockCards > div {

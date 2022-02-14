@@ -1,6 +1,6 @@
 .nav{
+    @include flexbox(row);
     height: 80px;
-    justify-content: initial;
     &__link{
         padding: 35px 40px 5px 40px;
         &:nth-child(1){

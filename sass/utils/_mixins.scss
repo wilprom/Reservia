@@ -19,6 +19,15 @@
     border-radius: $radiusItems;
 }
 
+@mixin flexbox($value) {
+    display: flex;
+    flex-direction: $value;
+}
+
+@mixin grid-layout {
+    display: grid;
+}
+
 @mixin mobile-only {
     @media screen and (max-width: 599px) {
         @content;

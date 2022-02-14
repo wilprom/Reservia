@@ -19,6 +19,7 @@ main{
     }
 }
 .heading{
+    @include flexbox(column);
     h3{
         margin-bottom: 8px;
     }
@@ -27,9 +28,9 @@ main{
     }
 }
 .research{
+    @include flexbox(row);
     width: 32%;
     height: 50px;
-    justify-content: initial;
     background-color: $colorSecondary;
     @include bdRadiusLeft;
     input{
@@ -85,12 +86,16 @@ main{
     @include bdRadiusRight;
 }
 .filtres{
+    @include flexbox(row);
+    justify-content: space-between;
     margin-top: 30px;
     height: 48px;
     width: 72%;
     >div{
         &:nth-child(2){
             width: 90%;
+            @include flexbox(row);
+            justify-content: space-between;
         }
     }
     h4{
@@ -158,8 +163,8 @@ main{
     }
 }
 .info{
+    @include flexbox(row);
     margin-top: 30px;
-    justify-content: initial;
     i{
         width: 16px;
         height: 21px;
@@ -176,6 +181,8 @@ main{
     }
 }
 .section_two{
+    @include flexbox(row);
+    justify-content: space-between;
     margin-top: 30px;
     height: 700px;
     > div{
@@ -256,10 +263,10 @@ main{
     }
 }
 .hostingBlock-std{
+    @include flexbox(column);
     width: 93.5%;
     margin: auto;
     margin-top: 30px;
-    justify-content: initial;
     > div:nth-child(1){
         h3{
             margin-top: 0px;
@@ -278,8 +285,10 @@ main{
     }
 }
 .line-hostingCards-std{
+    @include grid-layout;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
     a{
-        width: 31.5%;
         figure{
             margin: auto;
             width: 96%;
@@ -311,16 +320,8 @@ main{
         }
     }
     @include mobile-only{
-        flex-direction: column;
-        height: 740px;
-        a{
-            width: auto;
-        }
-    }
-    @include laptop-desktop{
-        .img-stdCards{
-            height: 150px;
-        }
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
     }
 }
 .hostingBlock-pop{
@@ -329,6 +330,7 @@ main{
     margin-top: 30px;
     > div{
         &:nth-child(1){
+            @include flexbox(row);
             margin-top: -25px;
             .icon-pop{
                 margin: auto;
@@ -350,19 +352,20 @@ main{
         }    
     }
     @include tablette-only{
-        width: 93.5%;
+        width: 94%;
     }
 }
 .column-hostingCards-pop{
-    height: 580px;
+    @include grid-layout;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
     a{
         figure{
-            margin: auto;
-            width: 97.5%;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            margin: 5px;
+            @include grid-layout;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
             .img-popCards{
-                width: 41%;
                 height: 170px;
             }
             img{
@@ -372,36 +375,26 @@ main{
                 @include bdRadiusLeft($radiusImg);
             }
             figcaption{
-                width: 58%;
-                padding-top: 5px;
-                padding-left: 15px;
-                padding-right: 20px;
-                h4{
-                    margin-top: 5px;
+                @include flexbox(column);
+                justify-content: space-between;
+                h4, p{
+                    margin: 0;
                 }
                 p{
-                    margin-top: -20px;
-                }
-                div{
-                    margin-top: 70px;
+                    margin-top: 10px;
                 }
             }
         }
     }
     @include mobile-only{
-        height: 600px;
         a{
             width: 90%;
             margin: auto;
         }
-        figcaption{
-            div{
-                margin-top: 58px !important; 
-            }
-        }
     }
 }
 .section_three{
+    @include flexbox(column);
     margin-top: 30px;
     @include mobile-and-tablette{
         margin: auto;
@@ -415,9 +408,9 @@ main{
     }
 }
 .activityBlockCards{
-    > div{
-        width: 23.5%;
-    }
+    @include grid-layout;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
     a{
         figure{
             box-shadow: $boxShadow;
@@ -450,6 +443,12 @@ main{
             }
         }
     }
+    div{
+        &:nth-child(2) , &:nth-child(4){
+           @include flexbox(column);
+           justify-content: space-between;
+        }
+    }
     &__mediumCard{
         img{
             height: 220px;
@@ -466,6 +465,9 @@ main{
         }
     }
     @include mobile-tablette-pc{
+        @include grid-layout;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
         &__largeCards{
             img{
                 &:nth-child(1){
@@ -478,14 +480,12 @@ main{
         }
     }
     @include mobile-only{
-        flex-direction: column;
-        height: 1565px;
         > div{
             width: auto;
             &:nth-child(2), &:nth-child(4){
                 div{
                     &:nth-child(1){
-                        padding-bottom: 25px;
+                        padding-bottom: 20px;
                     }
                 }
             }
@@ -495,7 +495,6 @@ main{
         }
     }
     @include tablette-pc{
-        flex-wrap: wrap;
         height: auto;
         > div{
             width: 100%;
@@ -518,4 +517,3 @@ main{
         }
     }
 }
-
