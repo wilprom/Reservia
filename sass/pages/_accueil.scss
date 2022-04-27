@@ -287,7 +287,7 @@ main{
 .line-hostingCards-std{
     @include grid-layout;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
+    column-gap: 20px;
     a{
         figure{
             margin: auto;
@@ -321,7 +321,7 @@ main{
     }
     @include mobile-only{
         grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 20px;
+        row-gap: 20px;
     }
 }
 .hostingBlock-pop{
@@ -358,13 +358,13 @@ main{
 .column-hostingCards-pop{
     @include grid-layout;
     grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 20px;
+    row-gap: 20px;
     a{
         figure{
             margin: 5px;
             @include grid-layout;
             grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 10px;
+            column-gap: 10px;
             .img-popCards{
                 height: 170px;
             }
@@ -410,7 +410,7 @@ main{
 .activityBlockCards{
     @include grid-layout;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 30px;
+    column-gap: 30px;
     a{
         figure{
             box-shadow: $boxShadow;
@@ -467,7 +467,7 @@ main{
     @include mobile-tablette-pc{
         @include grid-layout;
         grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 20px;
+        row-gap: 20px;
         &__largeCards{
             img{
                 &:nth-child(1){
