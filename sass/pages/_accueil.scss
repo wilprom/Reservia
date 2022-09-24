@@ -102,11 +102,12 @@ main{
         margin-top: 12.5px;
     }
     button{
-        i{
-            width: 50px;
-            height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon_filtre{
             margin: -2px 0 -2px -8px;
-            padding-top: 14px;
+            padding: 14px;
             background-color: $colorTertiary;
         }
         span{
@@ -116,13 +117,13 @@ main{
         &:hover{
             transform: scale(1.05);
             padding-bottom: 6px;
-            i{
-                height: 25px;
-                margin: initial;
+            .icon_filtre{
+                transform: scale(1.2);
+                margin-top: 2px
             }
         }
     }
-    button, i{
+    button, .icon_filtre{
         @include bdRadius($radiusFiltres);
     }
     @include mobile-and-tablette{
@@ -205,6 +206,7 @@ main{
     }
     figcaption{
         .icon{
+            color: $colorPrimary;
             &--colorfulIcon{
                 color: $colorQuaternary;
             }

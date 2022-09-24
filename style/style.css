@@ -291,11 +291,14 @@ main i {
 .filtres h4 {
   margin-top: 12.5px;
 }
-.filtres button i {
-  width: 50px;
-  height: 30px;
+.filtres button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filtres button .icon_filtre {
   margin: -2px 0 -2px -8px;
-  padding-top: 14px;
+  padding: 14px;
   background-color: #DEEBFF;
 }
 .filtres button span {
@@ -306,11 +309,11 @@ main i {
   transform: scale(1.05);
   padding-bottom: 6px;
 }
-.filtres button:hover i {
-  height: 25px;
-  margin: initial;
+.filtres button:hover .icon_filtre {
+  transform: scale(1.2);
+  margin-top: 2px;
 }
-.filtres button, .filtres i {
+.filtres button, .filtres .icon_filtre {
   border-radius: 25px;
 }
 @media screen and (max-width: 991px) {
@@ -392,6 +395,9 @@ main i {
 }
 .section_two a:hover {
   transform: scale(1.02);
+}
+.section_two figcaption .icon {
+  color: #0065FC;
 }
 .section_two figcaption .icon--colorfulIcon {
   color: #D1CFCF;
