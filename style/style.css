@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1440px;
 }
 body header, body main {
   width: 92.5%;
@@ -226,10 +227,10 @@ main i {
   color: #FFFFFF;
   border: 1px solid #0065FC;
 }
-.research button i {
+.research button .icon_search {
   display: none;
 }
-.research i {
+.research__location {
   flex: 0;
   margin: auto;
   margin-left: 18px;
@@ -246,14 +247,14 @@ main i {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
-  .research button i {
+  .research button .icon_search {
     display: initial;
     color: #FFFFFF;
   }
   .research button span {
     display: none;
   }
-  .research button:hover i {
+  .research button:hover .icon_search {
     color: #0065FC;
   }
 }
